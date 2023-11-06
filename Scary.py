@@ -206,6 +206,15 @@ while True:
         while True:
           choice = input("")
           if choice == "1":
+            turtle.fillcolor("blue")
+            turtle.penup()
+            turtle.goto(100,0)
+            turtle.pendown()
+            turtle.setheading(90)
+            turtle.begin_fill()
+            turtle.circle(100)
+            turtle.end_fill()
+            time.sleep(1)
             nar('The man thanks you for acknowledging him and says, "If you have 5 bucks I will let you go."')
             
             if MC.money >= 5:
