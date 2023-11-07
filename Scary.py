@@ -154,7 +154,7 @@ while True:
   if  Verified == 'Y':
     sceneset("black",'white', 300, '🏚')
     screen.bgcolor("black")
-    nar("You start in a vewy swowoky hwouse...")
+    nar("You start in a very spooky house...")
     nar('You have 2 choices, look for food or an escape. (input 1 or 2)')
     while True:
       choice = input("")
@@ -202,7 +202,7 @@ while True:
       elif choice == "2":
         clear()
         dia("This place is creepy, I'm going to find an exit...")
-        nar("You find a man, do you talk to them?")
+        nar("You find a man, do you talk to him?")
         
         while True:
           choice = input("")
