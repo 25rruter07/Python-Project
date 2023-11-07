@@ -132,6 +132,7 @@ while finished == 1:
     sp -= money
     print('You have ' + str(sp) + ' Skill Points left.')
   if sp < 0:
+    os.system("clear")
     print("Looks like you messed up point allocation... Try again.")
     pass
   else:
