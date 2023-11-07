@@ -57,8 +57,8 @@ def clear():
   os.system("clear")
 
 def sceneset(backc,color,size,content):
-  screen.bgcolor("black")
   screen.clear()
+  screen.bgcolor("black")
   turtle.color(color)
   style = ('Courier', int(size))
   turtle.penup()
