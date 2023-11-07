@@ -169,9 +169,9 @@ while True:
             nar("You enter the door, you find a monster.")
             
             if MC.attack >= 5:
-              nar("Congratulations, you win")
+              nar("Congratulations, you win!")
             else:
-              nar("You have been slain")
+              nar("You have been slain.")
             time.sleep(15)
             break
           elif choice == "2":
@@ -219,18 +219,18 @@ while True:
             nar('The man thanks you for acknowledging him and says, "If you have 5 bucks I will let you go."')
             
             if MC.money >= 5:
-              nar("Congradulations, you win")
+              nar("Congradulations, you win!")
             else:
-              nar("You have been slain")
+              nar("You have been slain.")
             time.sleep(15)
             break
           elif choice == "2":
             nar('The man gets angered and says, "You shall die here."')
             
             if MC.defense >= 5:
-              nar("Congradulations, you win")
+              nar("Congradulations, you win!")
             else:
-              nar("You have been slain")
+              nar("You have been slain.")
             time.sleep(15)
             break
           else:
