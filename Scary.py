@@ -207,6 +207,7 @@ while True:
       elif choice == "2":
         clear()
         dia("This place is creepy, I'm going to find an exit...")
+        sceneset("black",'white', 300, '🙋')
         nar("You find a man, do you talk to him?")
         
         while True:
@@ -228,11 +229,14 @@ while True:
             time.sleep(15)
             break
           elif choice == "2":
+            sceneset("black",'white', 300, '😠')
             nar('The man gets angered and says, "You shall die here."')
             
             if MC.defense >= 5:
+              sceneset("black",'white', 300, '🏆')
               nar("Congradulations, you win!")
             else:
+              sceneset("black",'white', 300, '🪦')
               nar("You have been slain.")
             time.sleep(15)
             break
@@ -264,8 +268,3 @@ while True:
     print("Please type capital 'Y' or 'N'.")
     print(MC)
     Verified = input('Proceed? (Y/N)')
-
-
-
-
-
