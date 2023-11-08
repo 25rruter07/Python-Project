@@ -60,6 +60,7 @@ def sceneset(backc,color,size,content):
   screen.clear()
   screen.bgcolor("black")
   turtle.pencolor(color)
+  turtle.hideturtle()
   style = ('Courier', int(size))
   turtle.penup()
   turtle.goto(0,-150)
