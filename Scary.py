@@ -120,14 +120,18 @@ while finished == 1:
   name = input("Enter a name ")
   sp = 10
   while sp > 0:
+    sceneset("black",'white', 300, '⚔')
     attack = int(input("Enter attack value (Integer) "))
     sp -= attack
+    sceneset("black",'white', 300, '💗')
     print('You have ' + str(sp) + ' Skill Points left.')
     charisma = int(input("Enter charisma value (Integer) "))
     sp -= charisma
+    sceneset("black",'white', 300, '🛡')
     print('You have ' + str(sp) + ' Skill Points left.')
     defense = int(input("Enter defense value (Integer) "))
     sp -= defense
+    sceneset("black",'white', 300, '💰')
     print('You have ' + str(sp) + ' Skill Points left.')
     money = int(input("Enter your money (Integer) "))
     sp -= money
@@ -209,13 +213,18 @@ while True:
           choice = input("")
           if choice == "1":
             sceneset("black",'white', 300, '😁')
-            time.sleep(1)
+            time.sleep(2)
+            sceneset("black",'white', 300, '💰')
             nar('The man thanks you for acknowledging him and says, "If you have 5 bucks I will let you go."')
+            time.sleep(2)
             
             if MC.money >= 5:
+              sceneset("black",'white', 300, '🏆')
               nar("Congradulations, you win!")
             else:
+              sceneset("black",'white', 300, '🪦')
               nar("You have been slain.")
+ 
             time.sleep(15)
             break
           elif choice == "2":
