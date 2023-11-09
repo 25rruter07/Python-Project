@@ -56,14 +56,14 @@ def typingInput(text):
 def clear():
   os.system("clear")
 
-def sceneset(backc,color,size,content):
+def sceneset(backc,color,size,content, xpos):
   screen.clear()
   screen.bgcolor("black")
   turtle.pencolor(color)
   turtle.hideturtle()
   style = ('Courier', int(size))
   turtle.penup()
-  turtle.goto(0,-150)
+  turtle.goto(0+xpos,-150)
   turtle.pendown()
   turtle.write(content, font=style, align='center')
   turtle.penup()
@@ -131,21 +131,21 @@ while finished == 1:
     choice2 = 0
     choice3 = 0
     choice4 = 0
-    sceneset("black",'white', 300, '⚔')
+    sceneset("black",'white', 300, '⚔', 0)
     choice1 = int(input("Enter attack value (Integer) "))
     attack +=  choice1
     sp -= choice1
-    sceneset("black",'white', 300, '💗')
+    sceneset("black",'white', 300, '💗', 0)
     print('You have ' + str(sp) + ' Skill Points left.')
     choice2 = int(input("Enter charisma value (Integer) "))
     charisma += choice2
     sp -= choice2
-    sceneset("black",'white', 300, '🛡')
+    sceneset("black",'white', 300, '🛡', 0)
     print('You have ' + str(sp) + ' Skill Points left.')
     choice3 = int(input("Enter defense value (Integer) "))
     defense += choice3
     sp -= choice3
-    sceneset("black",'white', 300, '💰')
+    sceneset("black",'white', 300, '💰', 0)
     print('You have ' + str(sp) + ' Skill Points left.')
     choice4 = int(input("Enter your money (Integer) "))
     money += choice4
@@ -176,7 +176,7 @@ Verified = input('Proceed? (Y/N)')
 while True:
   turtle.hideturtle()
   if  Verified == 'Y':
-    sceneset("black",'white', 300, '🏚')
+    sceneset("black",'white', 300, '🏚', 0)
     screen.bgcolor("black")
     nar("You start in a very spooky house...")
     nar('You have 2 choices, look for food or an escape. (input 1 or 2)')
@@ -185,13 +185,13 @@ while True:
       if choice == "1":
         clear()
         dia("I'm really hungry, I wonder if there is food here?...")
-        sceneset('black','brown', 300, '🚪')
+        sceneset('black','brown', 300, '🚪', 0)
         nar("You find a door, do you enter? (input 1 or 2)")
         
         while True:
           choice = input("")
           if choice == "1":
-            sceneset('black','brown', 300, '👹')
+            sceneset('black','brown', 300, '👹', 0)
             nar("You enter the door, you find a monster.")
             
             if MC.attack >= 5:
@@ -201,13 +201,25 @@ while True:
             time.sleep(15)
             break
           elif choice == "2":
-            sceneset('black','purple', 300, '🚪')
+            sceneset('black','purple', 300, '🚪', 0)
             nar("You find a wacky door, do you enter? (input 1 or 2)")
             
             while True:
               choice = input("")
               if choice == "1":
-        
+                sceneset('black','white', 300, '🕺', 100)
+                sceneset('black','white', 300, '🕺', 75)
+                sceneset('black','white', 300, '🕺', 50)
+                sceneset('black','white', 300, '🕺', 25)
+                sceneset('black','white', 300, '🕺', 0)
+                sceneset('black','white', 300, '🕺', -25)
+                sceneset('black','white', 300, '🕺', -50)
+                sceneset('black','white', 300, '🕺', -75)
+                sceneset('black','white', 300, '🕺', -100)
+
+
+                nar("You see a naked hairy fat man dancing.")
+                
                 time.sleep(15)
                 break
               elif choice == "2":
@@ -216,13 +228,13 @@ while True:
                 break
               else:
                 print("Choose 1 or 2")
-                sceneset('black','red', 300, '❌')
+                sceneset('black','red', 300, '❌', 0)
                 screen.bgcolor("black")
               
             
           else:
             print("Choose 1 or 2")
-            sceneset('black','red', 300, '❌')
+            sceneset('black','red', 300, '❌', 0)
             screen.bgcolor("black")
         
         time.sleep(15)
@@ -230,46 +242,46 @@ while True:
       elif choice == "2":
         clear()
         dia("This place is creepy, I'm going to find an exit...")
-        sceneset("black",'white', 300, '🙋')
+        sceneset("black",'white', 300, '🙋', 0)
         nar("You find a man, do you talk to him?")
         
         while True:
           choice = input("")
           if choice == "1":
-            sceneset("black",'white', 300, '😁')
+            sceneset("black",'white', 300, '😁', 0)
             time.sleep(2)
-            sceneset("black",'white', 300, '💰')
+            sceneset("black",'white', 300, '💰', 0)
             nar('The man thanks you for acknowledging him and says, "If you have 5 bucks I will let you go."')
             time.sleep(2)
             
             if MC.money >= 5:
-              sceneset("black",'white', 300, '🏆')
+              sceneset("black",'white', 300, '🏆', 0)
               nar("You paid off his debt, Congradulations, you win!")
             else:
-              sceneset("black",'white', 300, '🪦')
-              nar("You were molested and sold because you didn't have enough money.")
+              sceneset("black",'white', 300, '🪦', 0)
+              nar("you didn't have enough money, you were slain.")
  
             time.sleep(15)
             break
           elif choice == "2":
-            sceneset("black",'white', 300, '😠')
+            sceneset("black",'white', 300, '😠', 0)
             nar('The man gets angered and says, "You shall die here."')
             
             if MC.defense >= 5:
-              sceneset("black",'white', 300, '🏆')
+              sceneset("black",'white', 300, '🏆', 0)
               nar("Congradulations, you win!")
             else:
-              sceneset("black",'white', 300, '🪦')
+              sceneset("black",'white', 300, '🪦', 0)
               nar("You have been slain due to low defense.")
             time.sleep(15)
             break
           else:
             print("Choose 1 or 2")
-            sceneset('black','red', 300, '❌')
+            sceneset('black','red', 300, '❌', 0)
             screen.bgcolor("black")
       else:
         print("Choose 1 or 2")
-        sceneset('black','red', 300, '❌')
+        sceneset('black','red', 300, '❌', 0)
         screen.bgcolor("black")
     time.sleep(15)
     break
@@ -292,21 +304,21 @@ while True:
         choice2 = 0
         choice3 = 0
         choice4 = 0
-        sceneset("black",'white', 300, '⚔')
+        sceneset("black",'white', 300, '⚔', 0)
         choice1 = int(input("Enter attack value (Integer) "))
         attack +=  choice1
         sp -= choice1
-        sceneset("black",'white', 300, '💗')
+        sceneset("black",'white', 300, '💗', 0)
         print('You have ' + str(sp) + ' Skill Points left.')
         choice2 = int(input("Enter charisma value (Integer) "))
         charisma += choice2
         sp -= choice2
-        sceneset("black",'white', 300, '🛡')
+        sceneset("black",'white', 300, '🛡', 0)
         print('You have ' + str(sp) + ' Skill Points left.')
         choice3 = int(input("Enter defense value (Integer) "))
         defense += choice3
         sp -= choice3
-        sceneset("black",'white', 300, '💰')
+        sceneset("black",'white', 300, '💰', 0)
         print('You have ' + str(sp) + ' Skill Points left.')
         choice4 = int(input("Enter your money (Integer) "))
         money += choice4
