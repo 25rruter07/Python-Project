@@ -195,9 +195,11 @@ while True:
             nar("You enter the door, you find a monster.")
             
             if MC.attack >= 5:
+              sceneset("black",'white', 300, '🏆', 0)
               nar("Congratulations, you win!")
             else:
-              nar("You have been slain.")
+              sceneset("black",'white', 300, '🪦', 0)
+              nar("Your attack was too low. You have been slain.")
             time.sleep(15)
             break
           elif choice == "2":
@@ -208,17 +210,25 @@ while True:
               choice = input("")
               if choice == "1":
                 sceneset('black','white', 300, '🕺', 100)
+                time.sleep(0.25)
                 sceneset('black','white', 300, '🕺', 75)
+                time.sleep(0.25)
                 sceneset('black','white', 300, '🕺', 50)
+                time.sleep(0.25)
                 sceneset('black','white', 300, '🕺', 25)
+                time.sleep(0.25)
                 sceneset('black','white', 300, '🕺', 0)
+                time.sleep(0.25)
                 sceneset('black','white', 300, '🕺', -25)
+                time.sleep(0.25)
                 sceneset('black','white', 300, '🕺', -50)
+                time.sleep(0.25)
                 sceneset('black','white', 300, '🕺', -75)
+                time.sleep(0.25)
                 sceneset('black','white', 300, '🕺', -100)
 
 
-                nar("You see a naked hairy fat man dancing.")
+                nar("A man is walking towards you.")
                 
                 time.sleep(15)
                 break
@@ -272,7 +282,7 @@ while True:
               nar("Congradulations, you win!")
             else:
               sceneset("black",'white', 300, '🪦', 0)
-              nar("You have been slain due to low defense.")
+              nar("Your defense was too low. You have been slain.")
             time.sleep(15)
             break
           else:
