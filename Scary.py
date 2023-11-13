@@ -191,7 +191,7 @@ while True:
         while True:
           choice = input("")
           if choice == "1":
-            sceneset('black','brown', 300, '👹', 0)
+            sceneset('black','red', 300, '👹', 0)
             nar("You enter the door, you find a monster.")
             
             if MC.attack >= 5:
@@ -209,6 +209,7 @@ while True:
             while True:
               choice = input("")
               if choice == "1":
+                nar("A man is walking towards you.")
                 sceneset('black','white', 300, '🕺', 100)
                 time.sleep(0.25)
                 sceneset('black','white', 300, '🕺', 75)
@@ -226,9 +227,14 @@ while True:
                 sceneset('black','white', 300, '🕺', -75)
                 time.sleep(0.25)
                 sceneset('black','white', 300, '🕺', -100)
-
-
-                nar("A man is walking towards you.")
+                
+                time.sleep(1)
+                if MC.charisma >= 5:
+                  sceneset("black",'white', 300, '🏆', 0)
+                  nar("Congratulations, you have charmed the person into letting you go. You win!")
+                else:
+                  sceneset("black",'white', 300, '🪦', 0)
+                  nar("Your charisma was too low. You have been slain.")
                 
                 time.sleep(15)
                 break
@@ -254,7 +260,7 @@ while True:
         dia("This place is creepy, I'm going to find an exit...")
         sceneset("black",'white', 300, '🙋', 0)
         nar("You find a man, do you talk to him?")
-        
+        nar("Choose 1 or 2")
         while True:
           choice = input("")
           if choice == "1":
