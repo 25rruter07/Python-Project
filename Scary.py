@@ -239,7 +239,10 @@ while True:
                 time.sleep(15)
                 break
               elif choice == "2":
-                
+                sceneset("black", 'red', 300, '🫥',0)
+                nar("An assasin jumps you.")
+                sceneset("black", 'red', 300, '💀',0)
+                nar("You have been slain.")
                 time.sleep(15)
                 break
               else:
